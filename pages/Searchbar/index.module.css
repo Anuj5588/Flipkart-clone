@@ -1,0 +1,27 @@
+.searchbar input{
+    background-color: rgba(196, 226, 238, 0.685);
+    height: 40px;
+    padding: 5px;
+    padding-left: 50px;
+    border-style: none;
+    border-radius: 10px;
+   margin-left: 20px;
+    font-size: 20px;
+    width: 100%;
+  
+   
+}
+.searchicon{
+    position: absolute;
+    border-style: none;
+    top:30px;
+    left: 220px;
+    cursor: pointer;
+  background: none;
+}
+
+.searchbar input ::placeholder{
+ font-family: 'Poppins';
+ padding-left: 20px;
+    height: 30px;
+}

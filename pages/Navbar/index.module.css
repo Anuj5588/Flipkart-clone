@@ -1,0 +1,27 @@
+.navbar{
+    background-color: rgba(249, 245, 245, 0.89);
+    margin: 5px 0px;
+   width: 100%;
+   padding: 15px;
+   gap: 20px;
+   justify-content: space-around;
+   align-items: center;
+display: flex;
+}
+.SearchBar{
+    flex: 10;
+   
+}
+.carticon{
+    flex: 2;
+}
+
+.others{
+    flex:2
+}
+
+.profile{
+    flex:2;
+    margin-left: 80px;
+   
+}

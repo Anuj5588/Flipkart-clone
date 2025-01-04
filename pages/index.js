@@ -1,6 +1,6 @@
-import Category from "./category"
-import Navbar from "./Navbar"
-import PropertyForm from "./properties"
+import Category from "../component/category/index"
+import Navbar from "../component/Navbar/index"
+
 
 
 

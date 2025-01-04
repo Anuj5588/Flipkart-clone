@@ -47,4 +47,4 @@ jobs:
       # Step 3: Run the Docker Image
       - name: Run the Docker image
         run: |
-          docker run my-local-image:latest
+          docker run -d -p 3000:3000 my-local-image:latest

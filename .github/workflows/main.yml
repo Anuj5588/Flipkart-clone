@@ -44,7 +44,7 @@ jobs:
         run: |
           docker build -t my-local-image:latest .
 
-      # Step 3: Run the Docker Image (Optional)
+      # Step 3: Run the Docker Image
       - name: Run the Docker image
         run: |
           docker run my-local-image:latest

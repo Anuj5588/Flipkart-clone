@@ -1,0 +1,46 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main  # Trigger only when a PR is merged into the main branch
+
+jobs:
+  build-and-push-docker-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the Code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Install Dependencies (if required for the build)
+      - name: Set up Node.js (for frontend/backend builds)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      # Step 3: Run Normal Build
+      - name: Run Build (e.g., Frontend or Backend)
+        run: npm run build  # Replace with your specific build command
+
+      # Step 4: Log in to GitHub Container Registry
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.DOCKER_HUB_PAT }}
+
+      # Step 5: Build Docker Image
+      - name: Build the Docker image
+        run: |
+          docker build -t ghcr.io/<your-username>/<your-repo-name>:latest .
+
+      # Step 6: Push Docker Image
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/<your-username>/<your-repo-name>:latest

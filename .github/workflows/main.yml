@@ -38,9 +38,9 @@ jobs:
       # Step 5: Build Docker Image
       - name: Build the Docker image
         run: |
-          docker build -t ghcr.io/<your-username>/<your-repo-name>:latest .
+          docker build -t ghcr.io/Anuj5588/dockert_image:latest .
 
       # Step 6: Push Docker Image
       - name: Push Docker image
         run: |
-          docker push ghcr.io/<your-username>/<your-repo-name>:latest
+          docker push ghcr.io/Anuj5588/dockert_image:latest

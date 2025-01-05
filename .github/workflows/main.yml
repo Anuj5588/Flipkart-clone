@@ -43,7 +43,7 @@ jobs:
       # Step 2: Build the Docker Image
       - name: Build the Docker image
         run: |
-         docker build -f Dockerfile -t my-local-image:latest .
+         docker build -f  ./flipcart/Dockerfile -t my-local-image:latest .
 
 
       # Step 3: Run the Docker Image

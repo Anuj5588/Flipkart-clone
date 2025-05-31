@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+import Navbar from "../../component/Navbar/index";
 import Image from "next/image";
 import login from "../../Assests/logo/login.png";
 import { useRouter } from "next/router";
@@ -33,7 +33,7 @@ export default function Login({ register, setregister }) {
   return (
     <>
       <Navbar />
-      <div className=" flex  justify-center items-center pb-6 pt-6 bg-[#F1F2F4]">
+      <div className="  flex  justify-center items-center pb-6 pt-6 bg-[#F1F2F4]">
         <div className="bg-blue-600 h-[550px] w-[330px]  flex flex-col relative ">
           <h3
             className="text-white p-6 font-medium text-[30px]"
@@ -41,7 +41,7 @@ export default function Login({ register, setregister }) {
           >
             {register ? "Register" : "Login"}
           </h3>
-          <p className="text-gray-200 p-6 text-[18px]">
+          <p className="h1 p-6 ">
             Get access to your Orders, Wishlist and Recommendations
           </p>
           <div className="absolute bottom-12 left-[70px]">
@@ -61,7 +61,7 @@ export default function Login({ register, setregister }) {
             />
            
           </div>
-          <div className="pl-[30px] pb-[20px] text-[14px]  text-gray-600">
+          <div className="pl-[30px] pb-[20px] h1">
             By continuing, you agree to Flipkart's{" "}
             <a className="text-blue-600" href="/">
               Terms of Use

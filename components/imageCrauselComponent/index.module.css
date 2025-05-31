@@ -1,0 +1,9 @@
+.crausel{
+   
+height: 250px;
+cursor: pointer;
+}
+.parent{
+    margin: 1% 1% 0% 1%;
+    width: 98%;
+}

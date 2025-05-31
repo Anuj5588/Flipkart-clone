@@ -1,5 +1,7 @@
-import Category from "../component/category/index"
-import Navbar from "../component/Navbar/index"
+import Category from "../components/category/index"
+import NextJsCarousel from "../components/imageCrauselComponent"
+import Navbar from "../components/Navbar/index"
+import Footer from "../components/Footer/index"
 
 
 
@@ -7,9 +9,11 @@ import Navbar from "../component/Navbar/index"
 export default function Home(){
     return(
         <>
-        <div className="bg-[#F1F2F4] h-[800px]">
+        <div className="h-[800px]">
    <Navbar/>
    <Category/>
+   <NextJsCarousel/>
+   <Footer/>
    </div>
   
 

@@ -1,12 +1,10 @@
 
 import style from './index.module.css'
-import SearchBar from "../Searchbar/index"
+import SearchBar from "../Searchbar/index.js"
 import AccordianMenu from '../Accordian Menu'
 import { useRouter } from 'next/router'
+
 import Link from 'next/link'
-
-
-
 
 
 export default function Navbar(){

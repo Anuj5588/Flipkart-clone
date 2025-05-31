@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+import Navbar from "../../component/Navbar/index";
 import Image from "next/image";
 import login from "../../Assests/logo/login.png";
 import { useRouter } from "next/router";

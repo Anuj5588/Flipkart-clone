@@ -1,3 +1,8 @@
+import Facebook from '../Assests/footer icon/facebook.svg'
+import Instagram from '../Assests/footer icon/instagram.svg'
+import Twitter from '../Assests/footer icon/twitter.svg'
+import Youtube from '../Assests/footer icon/youtube.svg'
+
 export const footerData = [
     {
       "heading": "About",
@@ -45,7 +50,7 @@ export const footerData = [
         "Flipkart Internet Private Limited,",
         "Buildings Alyssa, Begonia &",
         "Clove Embassy Tech Village,",
-        "Outer Ring Road, Devarabeesanahalli Village,",
+        "Outer Ring Road, Devarabeesanahalli Village, ",
         "Bengaluru, 560103,",
         "Karnataka, India"
       ]
@@ -62,6 +67,31 @@ export const footerData = [
         "CIN : U51109KA2012PTC066107",
         "Telephone: 044-45614700 / 044-67415800"
       ]
+
+      
+    },
+     {
+      "heading": "Social :",
+      "items": [
+        {
+        "label":"Facebook",
+        "icon" : Facebook,
+        },
+         {
+        "label":"Facebook",
+        "icon" : Youtube,
+        },
+         {
+        "label":"Facebook",
+        "icon" : Instagram,
+        },
+         {
+        "label":"Facebook",
+        "icon" : Twitter,
+        }
+      ]
+
+      
     }
   ]
   

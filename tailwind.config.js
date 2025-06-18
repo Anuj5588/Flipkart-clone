@@ -11,7 +11,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        interSemiBold: ['inter_semi_bold', 'fallback-inter_semi_bold', 'Arial', 'sans-serif'],
+      },
+    },
+  
   },
   plugins: [],
 }

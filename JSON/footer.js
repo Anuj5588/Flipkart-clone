@@ -47,26 +47,27 @@ export const footerData = [
     {
       "heading": "Mail Us",
       "items": [
-        "Flipkart Internet Private Limited,",
-        "Buildings Alyssa, Begonia &",
-        "Clove Embassy Tech Village,",
-        "Outer Ring Road, Devarabeesanahalli Village, ",
-        "Bengaluru, 560103,",
-        "Karnataka, India"
-      ]
+  { "label": "Flipkart Internet Private Limited," },
+  { "label": "Buildings Alyssa, Begonia &" },
+  { "label": "Clove Embassy Tech Village," },
+  { "label": "Outer Ring Road, Devarabeesanahalli Village," },
+  { "label": "Bengaluru, 560103," },
+  { "label": "Karnataka, India" }
+]
+
     },
     {
       "heading": "Registered Office Address",
-      "items": [
-        "Flipkart Internet Private Limited,",
-        "Buildings Alyssa, Begonia &",
-        "Clove Embassy Tech Village,",
-        "Outer Ring Road, Devarabeesanahalli Village,",
-        "Bengaluru, 560103,",
-        "Karnataka, India",
-        "CIN : U51109KA2012PTC066107",
-        "Telephone: 044-45614700 / 044-67415800"
-      ]
+     "items": [
+  { "label": "Flipkart Internet Private Limited," },
+  { "label": "Buildings Alyssa, Begonia &" },
+  { "label": "Clove Embassy Tech Village," },
+  { "label": "Outer Ring Road, Devarabeesanahalli Village," },
+  { "label": "Bengaluru, 560103," },
+  { "label": "Karnataka, India" },
+  { "label": "CIN : U51109KA2012PTC066107" },
+  { "label": "044-45614700 / 044-67415800", "type": "Telephone" }
+]
 
       
     },

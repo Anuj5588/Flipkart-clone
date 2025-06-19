@@ -9,7 +9,7 @@ import Footer from "../components/Footer/index"
 export default function Home(){
     return(
         <>
-        <div className="h-[800px] bg-red-600">
+        <div className="h-[800px]">
    <Navbar/>
    <Category/>
    <NextJsCarousel/>

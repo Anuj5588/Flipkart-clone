@@ -1,9 +1,12 @@
-import Navbar from "../../component/Navbar/index";
+import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import login from "../../Assests/logo/login.png";
 import { useRouter } from "next/router";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import { useState } from "react";
 import axios from "axios";
+
 
 export default function Login({ register, setregister }) {
   const router = useRouter();
@@ -18,8 +21,10 @@ export default function Login({ register, setregister }) {
     }
   };
 
-  const handlePhoneChange = (e) => {
-    setPhoneNumber(e.target.value);
+  const handlePhoneChange = (p) => {
+    console.log("phonenumber",p)
+    setPhoneNumber('+'+p);
+    console.log("phonenumber",phoneNumber)
   };
 
   const handleregister = async () => {
@@ -27,6 +32,7 @@ export default function Login({ register, setregister }) {
       mobile: phoneNumber, // Pass the mobile number to the API
     };
     await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/users/sign-up`, data);
+    console.log("after api is heat")
     router.push('/verify-otp')
   };
 
@@ -51,12 +57,21 @@ export default function Login({ register, setregister }) {
 
         <div className="bg-white h-[550px] w-[500px] flex flex-col relative ">
           <div className="p-[30px]">
-            <input
-              className="bg-white appearance-none w-[450px] h-[50px] border-b-2 focus:outline-none border-orange-400"
-              placeholder="Enter Email/Mobile number"
-              type="text"
-              value={phoneNumber}
-              onChange={handlePhoneChange}
+            <PhoneInput 
+             value={phoneNumber}
+             placeholder="Enter the mobile number"
+             inputStyle={{ border: 'none',
+            
+    borderBottom: '2px solid orange',
+    width:'400px',
+    borderRadius:'0'
+    
+   
+
+             }}
+             country={'in'}
+             onChange={handlePhoneChange}
+             
 
             />
            

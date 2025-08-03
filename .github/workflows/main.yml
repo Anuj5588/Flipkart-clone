@@ -38,7 +38,8 @@ jobs:
 
       # Step 2: Build the Docker Image
       - name: Build Docker image
-        run: docker build -t my-local-image:latest -f flipcart/Dockerfile .
+        run: docker build -t my-local-image:latest -f Dockerfile .
+
 
       # Step 3: Run the Docker Image
       - name: Run Docker image

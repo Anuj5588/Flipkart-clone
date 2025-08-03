@@ -47,14 +47,13 @@ export const footerData = [
     {
       "heading": "Mail Us",
       "items": [
-  { "label": "Flipkart Internet Private Limited," },
+  {"label":"Flipkart Internet Private Limited," },
   { "label": "Buildings Alyssa, Begonia &" },
   { "label": "Clove Embassy Tech Village," },
   { "label": "Outer Ring Road, Devarabeesanahalli Village," },
   { "label": "Bengaluru, 560103," },
   { "label": "Karnataka, India" }
 ]
-
     },
     {
       "heading": "Registered Office Address",
@@ -69,25 +68,25 @@ export const footerData = [
   { "label": "044-45614700 / 044-67415800", "type": "Telephone" }
 ]
 
-      
+   
     },
      {
       "heading": "Social :",
       "items": [
         {
-        "label":"Facebook",
+        
         "icon" : Facebook,
         },
          {
-        "label":"Facebook",
+        
         "icon" : Youtube,
         },
          {
-        "label":"Facebook",
+        
         "icon" : Instagram,
         },
          {
-        "label":"Facebook",
+        
         "icon" : Twitter,
         }
       ]

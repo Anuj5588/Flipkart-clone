@@ -15,21 +15,40 @@ export default function Login({ register, setregister }) {
     }
   };
 
-  const handleOtpChange = (e, index) => {
-    const value = e.target.value;
-    if (/[^0-9]/.test(value)) return; // Ensure only digits are entered
-  
-    const updatedOtp = [...otp];
-    updatedOtp[index] = value;
-    setotp(updatedOtp);
-  
-    // Move to the next input field automatically
+ const handleOtpChange = (e, index) => {
+  const value = e.target.value;
+
+  if (/[^0-9]/.test(value)) return;
+
+  const updatedOtp = [...otp];
+  updatedOtp[index] = value;
+  setotp(updatedOtp);
+
+  if (value && index < 5) {
     const nextInput = document.getElementById(`otp-input-${index + 1}`);
-    if (nextInput) {
-      nextInput.focus();
-    }
-    
+    if (nextInput) nextInput.focus();
+  } else if (!value && index > 0) {
+    const prevInput = document.getElementById(`otp-input-${index - 1}`);
+    if (prevInput) prevInput.focus();
   }
+};
+
+const handleKeyDown = (e, index) => {
+  if (e.key === 'Backspace') {
+    if (otp[index] === '') {
+      const prevInput = document.getElementById(`otp-input-${index - 1}`);
+      if (prevInput) {
+        prevInput.focus();
+      }
+    } else {
+      // Clear the value if user presses backspace on filled input
+      const updatedOtp = [...otp];
+      updatedOtp[index] = '';
+      setotp(updatedOtp);
+    }
+  }
+};
+
 
   const handleVerifyOtp = async () => {
     const otpString = otp.join('');
@@ -83,8 +102,10 @@ export default function Login({ register, setregister }) {
         className="w-[40px] h-[40px] border-2 border-gray-300 rounded-lg text-center text-xl"
         maxLength="1"
         type="text"
+        id={`otp-input-${index}`}
         value={otp[index] || ''}
         onChange={(e) => handleOtpChange(e, index)}
+        onKeyDown={(e) => handleKeyDown(e, index)}
         autoFocus={index === 0}
       />
     ))}

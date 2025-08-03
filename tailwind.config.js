@@ -15,6 +15,9 @@ module.exports = {
        fontFamily: {
         interSemiBold: ['inter_semi_bold', 'fallback-inter_semi_bold', 'Arial', 'sans-serif'],
       },
+      screens: {
+        '3xl': '1920px', // custom breakpoint
+      },
     },
   
   },

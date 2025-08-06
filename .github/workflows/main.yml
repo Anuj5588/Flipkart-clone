@@ -32,9 +32,9 @@ jobs:
     needs: build  # This job waits for the 'build' job to finish successfully
 
     steps:
-      # # Step 1: Checkout code again, needed because each job runs in a fresh environment
-      # - name: Checkout repository
-      #   uses: actions/checkout@v4
+      # Step 1: Checkout code again, needed because each job runs in a fresh environment
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # Step 2: Build the Docker Image
       - name: Build Docker image

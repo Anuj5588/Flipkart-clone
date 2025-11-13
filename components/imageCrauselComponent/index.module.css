@@ -1,17 +1,19 @@
 .crausel{
    
-height: 250px;
+
 cursor: pointer;
 }
 .parent{
     margin: 1% 1% 0% 1%;
     width: 98%;
+   
 }
 
-@media (min-width:1600px) and (max-width: 3000px) {
+@media (min-width:100px) and (max-width: 3000px) {
   .parent{
-    width:85%;
+    width:90%;
+  
     background-color: aqua;
-    margin:4% 5% 4% 8%;
+    margin:4% 5% 4% 5%;
   }
 }

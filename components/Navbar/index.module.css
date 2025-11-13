@@ -1,13 +1,19 @@
-.navbar{
-    background-color: rgba(204, 44, 44, 0.89);
-    margin: 5px 0px;
-   width: 100%;
-   padding: 15px;
-   gap: 20px;
-   justify-content: space-around;
-   align-items: center;
-display: flex;
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  width: 100%;
+  padding: 15px;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+
+  position: sticky;   /* 👈 Fix navbar */
+  top: 0;            /* 👈 Stick it to the top */
+  left: 0;           /* 👈 Align from left */
+  z-index: 1000;     /* 👈 Keep it above other content */
 }
+
 .SearchBar{
     flex: 10;
    
